@@ -167,7 +167,7 @@ class Document extends \Magento\Framework\View\Element\UiComponent\DataProvider\
     private function setWebsiteValue()
     {
         $value = $this->getData(self::$websiteAttributeCode);
-        $list = $this->storeManager->getWebsites();
+        $list = $this->storeManager->getWebsites(true);
         $this->setCustomAttribute(self::$websiteAttributeCode, $list[$value]->getName());
         $this->setCustomAttribute(self::$websiteIdAttributeCode, $value);
     }
